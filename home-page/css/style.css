@@ -1,0 +1,125 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+    --lato: font-family: 'Lato', sans-serif;
+    /* colors */
+    --gold: #B29758;
+    --black: #212529;
+    --white: #F8F9FA;
+    /* bg colors */
+    --bg1: #34CCC6;
+    --bg2: #38BCBD;
+    --bg3: #3DADB4;
+    --bg4: #419DAA;
+
+    --bg5: #652060;
+    --bg6: #602F6A;
+    --bg7: #5C3F73;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+#body {
+    min-height: 100%;
+    /* background-color: darkviolet; */
+}
+
+.body {
+    /* font-family: 'Orelega One', cursive; */
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    background-image: url("../img/cool-background.svg");
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    /* color: whitesmoke; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    /* background-color: #511a4d; */
+    /* background-color: #5e275a; */
+    /* background-color: rgb(214, 245, 244); */
+}
+
+.overlay {
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* color: rgb(70, 70, 70); */
+    /* color: #181716; */
+    border-radius: 10px;
+    /* border-left: 5px solid #212529; */
+    background-color: #212529;
+    color: #fff;
+    /* background-color: rgba(255, 255, 255, .5); */
+    width: 35%;
+    /* color: #212529; */
+}
+
+.background {
+    display: flex;
+    /* background-color: #652060; */
+    /* background-color: rgb(214, 245, 244); */
+    height: 100vh;
+}
+
+.about {
+    background-color: rgb(214, 245, 244);
+    /* background-color: #34CCC6; */
+    /* height: 100vh; */
+}
+
+.parent {
+    height: auto;
+}
+
+.typewrite {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    text-decoration: none;
+    /* color: whitesmoke; */
+    /* color: #daa520; */
+    color: #B29758;
+    width: fit-content;
+    padding: 30px;
+}
+
+/* .typewrite:hover {
+    color: rgb(214, 212, 212);
+} */
+
+.lato {
+    font-family: var(--lato);
+}
+
+.project {
+    margin: 5em auto;
+}
+
+/* form styling */
+
+.form {
+    /* height: 100vh; */
+    background-image: url("../img/cool-background.svg");
+    background-size: cover;
+}
+
+/* footer */
+
+#footer {
+    padding: 20px;
+    background-color: #F8F9FA;
+    color: darkslategrey;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+/* breakpoints */
