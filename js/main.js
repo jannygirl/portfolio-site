@@ -10,6 +10,10 @@
  */
 {
     // From https://davidwalsh.name/javascript-debounce-function.
+    // Returns a function, that, as long as it continues to be invoked, will not
+    // be triggered. The function will be called after it stops being called for
+    // N milliseconds. If `immediate` is passed, trigger the function on the
+    // leading edge, instead of the trailing.
     function debounce(func, wait, immediate) {
         var timeout;
         return function () {
@@ -25,6 +29,7 @@
         };
     };
 
+    // builds a blob
     class Blob {
         constructor(el, options) {
             this.DOM = {};
@@ -165,6 +170,7 @@
     DOM.ctrlBack.addEventListener('click', () => close());
 
     let current;
+    // when a link is opened
     const open = (pos) => {
         this.isOpen = true;
         anime({
@@ -177,15 +183,17 @@
                 link.style.pointerEvents = 'none';
                 link.classList.remove('menu__item--showDeco');
             })
+
         });
 
         current = pos;
         const currentBlob = blobs[current];
         currentBlob.expand().then(() => {
             DOM.content.style.pointerEvents = 'auto';
-
             const contentInner = DOM.contentInner[pos];
             contentInner.style.opacity = 1;
+            // display it only when its clicked on
+            contentInner.style.display = 'grid'
             anime({
                 targets: [contentInner.querySelectorAll('.content__title > span'), contentInner.querySelectorAll('.content__subtitle > span'), DOM.ctrlBack],
                 duration: 200,
@@ -230,6 +238,11 @@
                 })
             });
         });
+
         blobs.filter(el => el != blobs[current]).forEach(blob => blob.show());
+
     };
 };
+
+// event listeners
+
