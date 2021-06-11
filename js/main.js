@@ -194,6 +194,7 @@
             contentInner.style.opacity = 1;
             // display it only when its clicked on
             contentInner.style.display = 'grid'
+      
             anime({
                 targets: [contentInner.querySelectorAll('.content__title > span'), contentInner.querySelectorAll('.content__subtitle > span'), DOM.ctrlBack],
                 duration: 200,
@@ -219,7 +220,10 @@
             opacity: 0,
             complete: () => {
                 contentInner.style.opacity = 0;
+                // disappear when you are closing the page
+                contentInner.style.display = 'none'
                 DOM.content.style.pointerEvents = 'none';
+              
             }
         });
 

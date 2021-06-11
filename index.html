@@ -5,14 +5,18 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Janice Llamas | Web Developer</title>
-	<meta name="description" content="Shape animation based on a work called Gradient Topography by Polar Vector" />
+	<meta name="description"
+		content="A portfolio site of Janice Llamas. Shape animation based on a work called Gradient Topography by Polar Vector" />
 	<meta name="keywords" content="svg, animation, organic, shape, animejs, web design, web development, demo" />
 	<meta name="author" content="Codrops" />
 	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="v3/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400:700:900" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
 	<link rel="stylesheet" href="css/individual-pages.css">
 
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -58,34 +62,41 @@
 				<a href="#" class="menu__item">Certifications</a>
 				<a href="#" class="menu__item">Projects</a>
 				<a href="#" class="menu__item">Contact</a>
-				<a href="#" class="menu__item">Credits</a>
+				<a href="#" class="menu__item">Resume</a>
+				<a href="#" class="menu__item">Tools</a>
 			</nav>
 			<svg class="scene" width="1440" height="800" preserveAspectRatio="xMinYMid slice" viewBox="0 0 1440 800"
 				xmlns:pathdata="http://www.codrops.com/">
 				<defs>
+					<!-- top left -->
 					<linearGradient id="gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
 						<stop stop-color="#f19872" />
 						<stop offset="1" stop-color="#e86c9a" />
 					</linearGradient>
+					<!-- middle left -->
 					<linearGradient id="gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
 						<stop stop-color="#0947db" />
+						<stop offset="1" stop-color="#deeeea" />
+					</linearGradient>
+					<!-- bottom left -->
+					<linearGradient id="gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop stop-color="#6f22b9" />
 						<stop offset="1" stop-color="#07d89d" />
 					</linearGradient>
-					<linearGradient id="gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
-						<stop stop-color="#ee2d29" />
-						<stop offset="1" stop-color="#f8ae2c" />
+					<!-- bottom middle -->
+					<linearGradient id="gradient-4" x1="0%" y1="0%" x2="70%" y2="60%">
+						<stop stop-color="#bf1363" />
+						<stop offset="1" stop-color="#a6d6d6" />
 					</linearGradient>
-					<linearGradient id="gradient-4" x1="0%" y1="0%" x2="100%" y2="100%">
-						<stop stop-color="#3a3d98" />
-						<stop offset="1" stop-color="#6f22b9" />
+					<!-- top right -->
+					<linearGradient id="gradient-5" x1="0%" y1="0%" x2="20%" y2="100%">
+						<stop stop-color="#EFC75B" />
+						<stop offset="1" stop-color="#9d316e" />
 					</linearGradient>
-					<linearGradient id="gradient-5" x1="0%" y1="0%" x2="100%" y2="100%">
-						<stop stop-color="#9d316e" />
-						<stop offset="1" stop-color="#de2d3e" />
-					</linearGradient>
+					<!-- bottom right -->
 					<linearGradient id="gradient-6" x1="0%" y1="0%" x2="100%" y2="100%">
-						<stop stop-color="#00ac53" />
-						<stop offset="1" stop-color="#23c3e0" />
+						<stop stop-color="#39a6a3" />
+						<stop offset="1" stop-color="#3973A6" />
 					</linearGradient>
 				</defs>
 				<g class="blob-1">
@@ -291,8 +302,132 @@
 			</div>
 			<div class="content__inner" id="projects">
 				<h2 class="content__title">Projects</h2>
-				<div class="portfolio">
-					<a href="img/clock.PNG" class="p__card">
+				<!-- <div id="gallery" class="portfolio container d-flex vh-100 align-items-center"> -->
+				<div id="gallery" class="container">
+					<!-- Images used to open the lightbox -->
+					<div class="portfolio">
+						<div class="col-lg-5 col-md-7 col-sm-12 p__card">
+							<div class="content">
+								<span class="title">JavaScript Clock</span>
+								<span class="category">HTML / CSS / JavaScript</span>
+							</div>
+							<div class="image">
+								<img src="img/clock.PNG" alt="A clock" />
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-7 col-sm-12 p__card">
+							<div class="content">
+								<span class="title">Image Gallery</span>
+								<span class="category">HTML / CSS / PHP </span>
+							</div>
+							<div class="image">
+								<img src="img/image-gallery.PNG" alt="An image gallery.">
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-7 col-sm-12 p__card">
+							<div class="content">
+								<span class="title">Login/Registration System</span>
+								<span class="category">HTML / CSS / PHP</span>
+							</div>
+							<div class="image">
+								<img src="img/login-registration-system.PNG" alt="A login registration system.">
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-7 col-sm-12 p__card">
+							<div class="content">
+								<span class="title">Temperature Converter</span>
+								<span class="category">HTML / CSS / PHP </span>
+							</div>
+							<div class="image"><img src="img/temp-converter.PNG" alt="A temperature converter."></div>
+						</div>
+					</div>
+				</div>
+				<!-- The Modal/Lightbox -->
+				<div id="myModal" class="portfolio_modal">
+
+					<div class="modal_content">
+						<div class="">
+							<!-- <div> -->
+							<span class="numbertext text-end"></span>
+							<span class="close cursor justify-self-end"><i class="bi bi-x"></i></span>
+							<!-- </div> -->
+
+						</div>
+
+						<div class="mySlides">
+							<!-- <div class="numbertext">1 / 4</div> -->
+							<div class="row justify-content-center">
+								<div class="col-7">
+									<img src="img/clock.PNG">
+									<!-- Caption text -->
+									<div class="caption-container">
+										<div class="caption">
+											<p>Project: Javascript Clock</p>
+
+											<p>About: This is a digital clock in a 12-hour format, made using HTML, CSS,
+												and JavaScript.</p>
+										</div>
+									</div>
+									<img src="img/clock_color.PNG" alt="">
+									<img src="img/clock_bg.PNG" alt="">
+									<img src="img/clock_2.PNG" alt="">
+								</div>
+							</div>
+							<!-- </div> -->
+
+
+						</div>
+
+						<div class="mySlides">
+							<!-- <div class="numbertext">2 / 4</div> -->
+							<div class="row justify-content-center">
+
+								<div class="col-7">
+									<img src="img/image-gallery.PNG">
+
+									<!-- Caption text -->
+									<div class="caption-container">
+										<p id="caption">This is my project</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mySlides">
+							<!-- <div class="numbertext">3 / 4</div> -->
+							<div class="row justify-content-center">
+								<div class="col-7">
+									<img src="img/login-registration-system.PNG">
+									<!-- Caption text -->
+									<div class="caption-container">
+										<p id="caption">This is my project</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mySlides">
+							<!-- <div class="numbertext">4 / 4</div> -->
+							<div class="row justify-content-center">
+								<div class="col-7">
+									<img src="img/temp-converter.PNG">
+									<!-- Caption text -->
+									<div class="caption-container">
+										<p id="caption">This is my project</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Next/previous controls -->
+						<i class="bi bi-chevron-right next"></i>
+
+						<i class="bi bi-chevron-left prev"></i>
+
+					</div>
+				</div>
+				<!-- <div class="portfolio">
+					<a href="pages/clock.html" class="p__card">
 						<div class="content">
 							<span class="title">JavaScript Clock</span>
 							<span class="category">HTML / CSS / JavaScript</span>
@@ -329,12 +464,8 @@
 							<img src="img/temp-converter.PNG" alt="" />
 						</div>
 					</a>
-				</div>
+				</div> -->
 			</div>
-
-
-
-
 			<div class="content__inner" id="contact">
 				<h2 class="content__title">Contact</h2>
 				<h3 class="content__subtitle"></h3>
@@ -362,9 +493,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="content__inner" id="credits">
-				<h2 class="content__title">Credits and References</h2>
-				<h3 class="content__subtitle">This site was made possible thanks to:</h3>
+			<div class="content__inner" id="resume">
+				<h2 class="content__title">Resume</h2>
+				<h3 class="content__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, voluptas?
+				</h3>
+			</div>
+			<div class="content__inner" id="tools">
+				<h2 class="content__title">Tools</h2>
+				<h3 class="content__subtitle">This site was made using:</h3>
 				<ul class="content__text text-center">
 					<li class="certificate mt-4">anime.js by Julian Garnier
 					</li>
@@ -375,6 +511,7 @@
 							Animation</a></li>
 				</ul>
 			</div>
+
 			<button class="content__close">
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg"
 					viewBox="0 0 16 16">
@@ -388,6 +525,7 @@
 	<script src="js/anime.min.js"></script>
 	<script src="js/demo.js"></script>
 	<script src="js/main.js"></script>
+	<script src="v3/script.js"></script>
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
