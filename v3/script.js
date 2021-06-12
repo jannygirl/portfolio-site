@@ -29,7 +29,7 @@ function showSlides(n) {
     const slides = document.getElementsByClassName("mySlides");
     const dots = document.getElementsByClassName("demo");
     const captionText = document.getElementById("caption");
-    let numberText = document.getElementsByClassName('numbertext')
+    // let numberText = document.getElementsByClassName('numbertext')
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (let i = 0; i < slides.length; i++) {
@@ -39,21 +39,23 @@ function showSlides(n) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    numberText[0].innerText = `${n} / 4`
+    // numberText[0].innerText = `${n} / 4`
     // dots[slideIndex - 1].className += " active";
     // captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
 const cards = document.querySelectorAll('.p__card')
 const close = document.querySelector('.close')
-const prevBtn = document.querySelector('.prev')
-const nextBtn = document.querySelector('.next')
+// const prevBtn = document.querySelector('.prev')
+// const nextBtn = document.querySelector('.next')
 const gallery = document.querySelector('#gallery')
 const galleryCloseBtn = document.querySelector('.content__close')
 
 
-let i = 0
-cards.forEach(element => {
+
+for (let i = 0; i < cards.length; i++) {
+    i = 0
+    const element = cards[i];
     element.addEventListener('click', (e) => {
         i++
         gallery.style.display = 'none'
@@ -61,15 +63,15 @@ cards.forEach(element => {
         openModal()
         currentSlide(i)
     })
+}
 
-});
 close.addEventListener('click', closeModal)
-prevBtn.addEventListener('click', () => {
-    plusSlides(-1)
-})
-nextBtn.addEventListener('click', () => {
-    plusSlides(1)
-})
+// prevBtn.addEventListener('click', () => {
+//     plusSlides(-1)
+// })
+// nextBtn.addEventListener('click', () => {
+//     plusSlides(1)
+// })
 
 
 

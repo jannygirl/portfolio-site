@@ -356,16 +356,17 @@ main {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(20deg, var(--gold), var(--gold));
+	/* background: linear-gradient(20deg, var(--gold), var(--gold)); */
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	transform-origin: center;
+	transform-origin: left;
 	transform: scaleX(0);
 	/* border-radius: 5px; */
 	
 
 }
+
 .menu__item--showDeco::before {
     transition: transform 0.8s cubic-bezier(0.2,1,0.3,1);
 	transform: scaleX(0);
@@ -388,39 +389,48 @@ main {
 }
 /* FIX THIS ANIMATION */
 
-/* .menu__item::before {
-	content: '';
-	width: 60%;
-	height: 25px;
+/* about menu item */
+.menu__item::before {
 	background: linear-gradient(45deg, #f19872, #e86c9a);
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	transform-origin: 0 0;
-	transform: scale3d(0,1,1);
-} */
-
-/* background: linear-gradient(45deg, #0947db, #07d89d); */
-
-/* .menu__item:nth-child(2)::before {
+} 
+.menu__item:hover::before {
+		background: linear-gradient(45deg, #f19872, #e86c9a);
+}
+/* certifications menu item */
+.menu__item:nth-child(2):hover::before {
+	background: linear-gradient(45deg, #0947db, #779DCA);
+}
+.menu__item:nth-child(2)::before {
+	background: linear-gradient(45deg, #0947db, #779DCA);
+} 
+/* projects menu item */
+.menu__item:nth-child(3):hover::before {
 	background: linear-gradient(45deg, #652060, #34CCC6);
 }
-
 .menu__item:nth-child(3)::before {
-	background: linear-gradient(45deg, #ee2d29, #f8ae2c);
+	background: linear-gradient(45deg, #652060, #34CCC6);
 }
-
-.menu__item:nth-child(4)::before {
-	background: linear-gradient(45deg, #3a3d98, #6f22b9);
-}
-
-.menu__item:nth-child(5)::before {
+/* contact menu item */
+.menu__item:nth-child(4):hover::before {
 	background: linear-gradient(45deg, #9d316e, #de2d3e);
 }
-
+.menu__item:nth-child(4)::before {
+	background: linear-gradient(45deg, #9d316e, #de2d3e);
+}
+/* resume menu item */
+.menu__item:nth-child(5):hover::before {
+	background: linear-gradient(45deg, #ee2d29, #f8ae2c);
+}
+.menu__item:nth-child(5)::before {
+	background: linear-gradient(45deg, #ee2d29, #f8ae2c);
+}
+/* tools menu item */
+.menu__item:nth-child(6):hover::before {
+	background: linear-gradient(45deg, #00ac53, #23c3e0);
+}
 .menu__item:nth-child(6)::before {
 	background: linear-gradient(45deg, #00ac53, #23c3e0);
-} */
+}
 	
 /* .menu__item--showDeco::before {
     transition: transform 0.8s cubic-bezier(0.2,1,0.3,1);
