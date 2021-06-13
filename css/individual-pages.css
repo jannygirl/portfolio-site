@@ -61,6 +61,11 @@
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; */
 }
 
+#projects p {
+  margin-bottom: 0;
+  line-height: 2;
+}
+
 .portfolio {
   
   display: flex;
@@ -115,9 +120,7 @@ height:40%;
  
 }
 
-.mySlides img{
-  width: 100%;
-}
+
 
 .p__card:hover .content {
   bottom: 0px;

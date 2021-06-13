@@ -139,9 +139,11 @@
 
     DOM.content = document.querySelector('.content--reveal');
     DOM.contentInner = Array.from(DOM.content.querySelectorAll('.content__inner'), (el) => {
-        charming(el);
+        // this makes all the bunches of spans
+        // charming(el);
         return el;
     });
+
     DOM.ctrlBack = DOM.content.querySelector('.content__close');
     DOM.links = Array.from(document.querySelectorAll('.menu > .menu__item'));
 
@@ -194,9 +196,10 @@
             contentInner.style.opacity = 1;
             // display it only when its clicked on
             contentInner.style.display = 'grid'
-      
+
             anime({
                 targets: [contentInner.querySelectorAll('.content__title > span'), contentInner.querySelectorAll('.content__subtitle > span'), DOM.ctrlBack],
+                // targets: [contentInner.querySelectorAll('.content__title > span'), DOM.ctrlBack],
                 duration: 200,
                 delay: (t, i) => anime.random(0, 600),
                 easing: 'easeInOutQuad',
@@ -210,7 +213,6 @@
     const close = () => {
         if (!this.isOpen) return;
         this.isOpen = false;
-
         const contentInner = DOM.contentInner[current];
         anime({
             targets: [contentInner.querySelectorAll('.content__title > span'), contentInner.querySelectorAll('.content__subtitle > span'), DOM.ctrlBack],
@@ -223,7 +225,6 @@
                 // disappear when you are closing the page
                 contentInner.style.display = 'none'
                 DOM.content.style.pointerEvents = 'none';
-              
             }
         });
 
