@@ -102,10 +102,6 @@ a:focus {
 	}
 }
 
-
-
-
-
 .hidden {
 	position: absolute;
 	overflow: hidden;
@@ -322,8 +318,6 @@ main {
 	margin: 0 0 0 25vw;
 	font-size: 4vw;
 	align-items: flex-start;
-	/* border-left: var(--gold) 5px solid; */
-
 }
 
 .menu__item {
@@ -342,15 +336,7 @@ main {
 	flex-wrap: wrap;
 	position: relative;
 	padding: 0 20px;
-/* 
-	background:
-	linear-gradient(
-	  to right,
-	  var(--gold) 0%,
-	  var(--gold) 5px,
-	  transparent 5px
-	); */
-	/* border-left: var(--gold) 5px solid; */
+
 }
 .menu__item::before {
 	content: '';
@@ -362,9 +348,6 @@ main {
 	bottom: 0;
 	transform-origin: left;
 	transform: scaleX(0);
-	/* border-radius: 5px; */
-	
-
 }
 
 .menu__item--showDeco::before {
@@ -390,58 +373,30 @@ main {
 /* FIX THIS ANIMATION */
 
 /* about menu item */
-.menu__item::before {
+.menu__item::before, .menu__item:hover::before {
 	background: linear-gradient(45deg, #f19872, #e86c9a);
 } 
-.menu__item:hover::before {
-		background: linear-gradient(45deg, #f19872, #e86c9a);
-}
 /* certifications menu item */
-.menu__item:nth-child(2):hover::before {
+.menu__item:nth-child(2):hover::before, .menu__item:nth-child(2)::before {
 	background: linear-gradient(45deg, #0947db, #779DCA);
 }
-.menu__item:nth-child(2)::before {
-	background: linear-gradient(45deg, #0947db, #779DCA);
-} 
 /* projects menu item */
-.menu__item:nth-child(3):hover::before {
-	background: linear-gradient(45deg, #652060, #34CCC6);
-}
-.menu__item:nth-child(3)::before {
+.menu__item:nth-child(3):hover::before,.menu__item:nth-child(3)::before {
 	background: linear-gradient(45deg, #652060, #34CCC6);
 }
 /* contact menu item */
-.menu__item:nth-child(4):hover::before {
-	background: linear-gradient(45deg, #9d316e, #de2d3e);
-}
-.menu__item:nth-child(4)::before {
+.menu__item:nth-child(4):hover::before, .menu__item:nth-child(4)::before  {
 	background: linear-gradient(45deg, #9d316e, #de2d3e);
 }
 /* resume menu item */
-.menu__item:nth-child(5):hover::before {
-	background: linear-gradient(45deg, #ee2d29, #f8ae2c);
-}
-.menu__item:nth-child(5)::before {
+.menu__item:nth-child(5):hover::before,.menu__item:nth-child(5)::before {
 	background: linear-gradient(45deg, #ee2d29, #f8ae2c);
 }
 /* tools menu item */
-.menu__item:nth-child(6):hover::before {
+.menu__item:nth-child(6):hover::before, .menu__item:nth-child(6)::before {
 	background: linear-gradient(45deg, #00ac53, #23c3e0);
 }
-.menu__item:nth-child(6)::before {
-	background: linear-gradient(45deg, #00ac53, #23c3e0);
-}
-	
-/* .menu__item--showDeco::before {
-    transition: transform 0.8s cubic-bezier(0.2,1,0.3,1);
-    transform: scale3d(1,1,1);
-}
-
-.menu__item--showDeco:hover::before {
-    transition: transform 0.8s cubic-bezier(0.2,1,0.3,1);
-    transform: scale3d(1.2,1,1);
-} */
-
+ 
 /* .menu__item span {
 	display: block;
 	position: relative;
