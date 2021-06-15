@@ -1,5 +1,5 @@
 #gallery, #myModal {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 #portfolio{
   /* position: relative; */
@@ -27,6 +27,7 @@
 
 .modal_content {
   position: relative; 
+  
   /* display: flex; */
   width: 100%;
   max-width: 1200px;
@@ -56,14 +57,17 @@
 .mySlides {
   display: none;
   height: 100%;
-  width: 100%;
+  width: 100%; 
   /* flex-wrap: wrap; */
 }
+
 .mySlides img{
   width: 100%;
   /* width: 100px;*/
   height: 100%; 
 }
+
+
 /* Next & previous buttons */
 .prev,
 .next {
@@ -109,8 +113,9 @@
 .caption-container {
   /* text-align: center; */
   background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
   border: 5px solid #fff;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   padding: 30px 16px;
   color: white;
 }

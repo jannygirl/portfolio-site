@@ -3,7 +3,8 @@
 function openModal() {
     document.getElementById("myModal").style.display = "block";
     gallery.style.display = 'none'
-
+    contentInner.classList.add('projects-container')
+    footer.style.display = 'none'
 }
 
 // Close the Modal
@@ -11,14 +12,17 @@ function closeModal() {
     document.getElementById("myModal").style.display = "none";
     gallery.style.display = 'block'
     galleryCloseBtn.style.display = 'block'
+    footer.style.display = 'flex'
+
+    // i = 1
     // contentInner.forEach(element => {
     //     element.style.display = 'none'
     // });
 
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex
+// showSlides(slideIndex);
 
 // Next/previous controls
 // function plusSlides(n) {
@@ -34,7 +38,7 @@ function showSlides(n) {
     // var i;
     const slides = document.getElementsByClassName("mySlides");
     // const dots = document.getElementsByClassName("demo");
-    const captionText = document.getElementById("caption");
+    // const captionText = document.getElementById("caption");
     // let numberText = document.getElementsByClassName('numbertext')
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
@@ -54,17 +58,16 @@ const cards = document.querySelectorAll('.p__card')
 const close = document.querySelector('.close')
 const gallery = document.querySelector('#gallery')
 const galleryCloseBtn = document.querySelector('.content__close')
-// const contentInner = document.querySelector('#gallery')
+const contentInner = document.querySelector('#container')
+const footer = document.querySelector('.footer')
 
 for (let i = 0; i < cards.length; i++) {
     const element = cards[i];
     element.addEventListener('click', (e) => {
-        i++
         gallery.style.display = 'none'
         galleryCloseBtn.style.display = 'none'
-        // contentInner.style.display = 'block'
         openModal()
-        currentSlide(i)
+        currentSlide(i + 1)
     })
 }
 

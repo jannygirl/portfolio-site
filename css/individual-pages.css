@@ -74,7 +74,7 @@
   /* min-width: 320px; */
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  /* height: 80vh; */
   /* margin-top: 2em; */
 }
 
@@ -190,3 +190,10 @@ div.gallery {
     padding: 15px;
     text-align: center;
   } */
+
+  /* skills */
+
+  .col-lg-4{
+    display:flex ;
+    justify-content:center;
+  }

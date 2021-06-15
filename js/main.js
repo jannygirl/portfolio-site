@@ -196,6 +196,8 @@
             contentInner.style.opacity = 1;
             // display it only when its clicked on
             contentInner.style.display = 'grid'
+            const footer = document.querySelector('.footer')
+            footer.style.display = 'flex'
 
             anime({
                 targets: [contentInner.querySelectorAll('.content__title > span'), contentInner.querySelectorAll('.content__subtitle > span'), DOM.ctrlBack],
@@ -214,6 +216,7 @@
         if (!this.isOpen) return;
         this.isOpen = false;
         const contentInner = DOM.contentInner[current];
+        const footer = document.querySelector('.footer')
         anime({
             targets: [contentInner.querySelectorAll('.content__title > span'), contentInner.querySelectorAll('.content__subtitle > span'), DOM.ctrlBack],
             delay: (t, i) => anime.random(0, 300),
@@ -224,7 +227,9 @@
                 contentInner.style.opacity = 0;
                 // disappear when you are closing the page
                 contentInner.style.display = 'none'
-                DOM.content.style.pointerEvents = 'none';
+                footer.style.display = 'none'
+                DOM.content.style.pointerEvents = 'none'
+
             }
         });
 
