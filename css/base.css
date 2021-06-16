@@ -20,7 +20,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-
 /* Color schemes */
 .demo-1 {
 	--color-text: #ededed;
@@ -33,17 +32,17 @@ body {
 	--color-title: #fff;
 	--color-subtitle: #ededed;
 	--color-deco: #161616;
-/* hover menu color scheme */
---color-menu-hover-1: #E96F98;
---color-menu-hover-2: #087AC5;
---color-menu-hover-3: #F04A2A;
---color-menu-hover-4: #423A9D;
---color-menu-hover-5: #B52F5C;
-/* --color-menu-hover-6: #212529; */
-/* other colors */
---gold: #B29758;
---light-orange: #f19872;
---pink: #e86c9a;
+	/* hover menu color scheme */
+	--color-menu-hover-1: #E96F98;
+	--color-menu-hover-2: #087AC5;
+	--color-menu-hover-3: #F04A2A;
+	--color-menu-hover-4: #423A9D;
+	--color-menu-hover-5: #B52F5C;
+	/* --color-menu-hover-6: #212529; */
+	/* other colors */
+	--gold: #B29758;
+	--light-orange: #f19872;
+	--pink: #e86c9a;
 }
 /* links */
 a {
@@ -57,6 +56,7 @@ a:focus {
 	color: var(--color-link-hover);
 	outline: none;
 }
+
 /* Fade effect */
 .js body {
 	opacity: 0;
@@ -169,10 +169,6 @@ main {
 }
 
 .content__inner {
-	/* position: absolute; */
-		/* height: 100%; */
-	/* left: 0;
-	top: 0; */
 	width: 100%;
 	display: none;
 	align-items: center;
@@ -198,8 +194,11 @@ main {
 	text-align: center;
 }
 
+#about .content__subtitle{
+	max-width: 300px;	
+}
+
 .content__subtitle  {
-	/* max-width: 300px;	 */
 	text-align: center;
 	font-size: 2em;
 	font-weight: 400;
@@ -209,7 +208,6 @@ main {
 
 .content__text  {
 	max-width: 1000px;
-	/* text-align: center; */
 	font-size: 1.25em;
 	font-weight: 400;
 	margin: 0;
@@ -217,28 +215,21 @@ main {
 }
 
 .footer{
-	/* height: 17vh; */
 	display: none;
 	align-self: center; 
-	 justify-content: center;
-
-	/* justify-content: center; */
-	/* position: absolute;
-	bottom: 2%;
-	right: 2%; */
-/*
-	/* right: 2%; */
+	justify-content: center;
+	height: 100px;
 	width: 100%;
-	
 }
+
 .footer p {
 	background: rgba(255, 255, 255, .5);
 }
 
-
 .footer a{
 	color: #000;
 }
+
 .footer a:hover{
 	text-decoration: underline;
 	color: var(--color-menu);
@@ -368,11 +359,11 @@ main {
 	padding: 0 20px;
 
 }
+
 .menu__item::before {
 	content: '';
 	width: 100%;
 	height: 100%;
-	/* background: linear-gradient(20deg, var(--gold), var(--gold)); */
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -383,14 +374,11 @@ main {
 .menu__item--showDeco::before {
     transition: transform 0.8s cubic-bezier(0.2,1,0.3,1);
 	transform: scaleX(0);
-
 }
 
 .menu__item--showDeco:hover::before {
     transition: transform 0.8s cubic-bezier(0.2,1,0.3,1);
 	transform: scaleX(1);
-
-
 } 
 
  .menu__item span {
@@ -399,10 +387,9 @@ main {
 }
 .menu__item:hover,
 .menu__item:focus {
-/* background: rgba(0, 0,0, .4); */
 	color: var(--color-text);
 }
-/* FIX THIS ANIMATION */
+
 
 /* about menu item */
 .menu__item::before, .menu__item:hover::before {
@@ -429,12 +416,6 @@ main {
 	background: linear-gradient(45deg, #00ac53, #23c3e0);
 }
  
-/* .menu__item span {
-	display: block;
-	position: relative;
-} */
-/* END OF ANIMATION */
-
 /* Header */
 .codrops-header {
 	position: relative;
@@ -454,21 +435,6 @@ main {
 	font-size: 1em;
 }
 
-.info {
-	margin: 0;
-	color: var(--color-info);
-	grid-area: info;
-	align-self: end;
-	justify-self: end;
-}
-
-.github {
-	display: block;
-	align-self: end;
-	grid-area: github;
-	justify-self: start;
-}
-
 /* Top Navigation Style */
 .codrops-links {
 	position: relative;
@@ -479,44 +445,39 @@ main {
 	white-space: nowrap;
 }
 
-.codrops-icon {
-	display: inline-block;
-	margin: 0.15em;
-	padding: 0.25em;
-}
 @media (min-width: 1200px){
-	.projects-container {
-		/* margin-top: 35rem; */
-		height: 100vh;
-		/* margin-top: 100%; */
-
+	.content__inner {
+		margin-top: 7em;
+	}
+	.p__card .content{
+		bottom: -100px;
 	}
 }
+
 @media (min-width: 1000px) and (max-width: 1199px){
-	/* #myModal {
-		margin-top: 55rem;
-	} */
 	.projects-container {
 		height: 80vh;
 	}
+	.p__card .content{
+		bottom: -100px;
+	}
 }
 @media (max-width: 999px){
-	#myModal {
-		/* margin-top: 45rem; */
+	.p__card .content{
+		bottom: -100px;
 	}
 }
 @media screen and (max-width: 55em) {
 	.message {
 		display: block;
 	}
-	.content {
+	.p__card .content {
 		flex-direction: column;
 		height: 100%;
-		/* max-height: 0; */
-		/* padding-bottom: 10em; */
+		bottom: -500px;
 	}
+
 	.content--fixed {
-		/* position: relative; */
 		z-index: 10000;
 		display: block;
 		padding: 0.85em 0.5em 2em;
@@ -530,13 +491,6 @@ main {
 		font-size: 1.5em;
 		text-align: center;
 	}
-	.info {
-		margin: 0;
-		text-align: center;
-	}
-	.github {
-		display: none;
-	}
 	.codrops-links {
 		margin: 0;
 	}
@@ -546,13 +500,18 @@ main {
 		align-items: center;
 	}
 	#myModal {
-		margin-top: 0;
+		margin-top: 3em;
 	}
 	.content__inner {
 		margin-top: 7em;
 	}
 	.content__close {
-		top: 15em;
+		top: 1em;
+		right: 4%;
 	}
 
+	.close{
+		top: -2%;
+		right: -2%;
+	  } 
 }

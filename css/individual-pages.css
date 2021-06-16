@@ -2,64 +2,60 @@
 	--color-border: #ededed;
   --text--color: #ededed;
   --mainColor: #ff9800;
-
-
+  /* skills page colors */
+  --pink: rgba(196, 49, 171, 0.8);
+  --light-pink: rgba(255, 137,235, 0.8);
+  --green: #006838;
+  --dark-green: rgba(1, 194, 120, 0.6);
+  --light-green: #26A367;
+  --red: rgba(196, 34, 5, 0.6);
+  --yellow: rgba(229, 211, 11, 0.8);
+  --light-yellow: #F7C41C;
+  --purple: rgba(117, 19, 163, 0.6);
+  --light-purple: #777BB3;
+  --blue: rgba(19, 41, 163, 0.8);
+  --light-blue: #3276AE;
+  --pale-blue: #3765AF;
+  --orange:#F45A3B;
+  --light-orange: #FF715A;
+  --violet: #7952B3;
+  --brown: #005E30;
+  /* butterfly colors */
+  --turquoise:#40BDA9;
+  --crimson: #E34F3F;
 }
+
+  
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #about, #certifications, #projects, #contact, #credits{
   display: none;
 }
 
-/* home page */
-
-
-
-
 /* certificate page */
-.box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-clip: border-box;
+
+#certifications .p__card .content {
+  bottom: -150px;
+
 }
-.certificate-box {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    border-radius: .25rem;
+#certifications .p__card:hover .content {
+  bottom: 0px;
+  color: #fff;
 }
-.box>.certificate-box  {
-    border-top: inherit;
-    border-bottom: inherit;
+#certifications .p__card img{
+transform: scale(1);
 }
 
-.certificate-box-flush {
-    border-radius: 0;
-}
+#certifications .p__card img:hover{
+  transform: scale(1.1);
 
-.certificate {
-    position: relative;
-    display: block;
-    padding: .5rem 1rem;
-    color: var(--text--color);
-    text-decoration: none;
-    background: rgba(0,0,0,.3);
-    border: 3px solid var(--color-border);
-    border-radius: 15px;
 }
 
 /* portfolio */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-#portfolio_body {
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; */
-}
 
 #projects p {
   margin-bottom: 0;
@@ -67,37 +63,25 @@
 }
 
 .portfolio {
-  
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  /* min-width: 320px; */
   align-items: center;
   justify-content: center;
-  /* height: 80vh; */
-  /* margin-top: 2em; */
 }
 
 .portfolio h2 {
   flex-basis: 100%;
   text-align: center;
   margin: 50px auto 30px;
-  text-transform: uppercase;
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: #111;
 }
 .p__card {
-height:40%;
-/* width: 50%; */
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
+
 .p__card .content {
   z-index: 2;
   width: 100%;
   position: absolute;
-  bottom: -100px;
   transition: all 0.7s ease;
   display: flex;
   flex-direction: column;
@@ -107,20 +91,18 @@ height:40%;
   min-height: 100px;
   background: #111;
 }
+
 .p__card .image {
   z-index: 1;
   height: 100%;
-  
 }
-.p__card img {
+
+.p__card .image img {
   height: 100%;
   width: 100%;
   transition: all 0.5s ease;
   transform: scale(1.2);
- 
 }
-
-
 
 .p__card:hover .content {
   bottom: 0px;
@@ -148,11 +130,7 @@ height:40%;
   font-weight: 700;
 }
 
-
 @media screen and (max-width: 768px) {
-  .p__card {
-  width: 50%;
-  }
   .p__card .content {
     bottom: 0;
   }
@@ -164,36 +142,377 @@ height:40%;
   }
 }
 
-/* .project-img{
-    width: 300px;
-    height: 300px;
-}
-
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 1000px;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  } */
-
   /* skills */
 
   .col-lg-4{
     display:flex ;
     justify-content:center;
+  }
+
+  
+  @keyframes flip-left {
+    0%{
+      transform: rotateY(0deg);
+    }
+    50%{
+      transform: rotateY(180deg);
+    }
+    100%{
+      transform: rotateY(0deg);
+    }
+  }
+  
+  @keyframes grow-flowers {
+    0%{
+      top:200px;
+    }
+    50%{
+      top:50px;
+    }
+    100%{
+      top:200px;
+    }
+  }
+  
+  .section{
+    margin-top: 100px;
+    height: 360px;
+    overflow: hidden;
+  }
+  
+  .description{
+    background-color: var(--brown);
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+  }
+  
+  .description p {
+    margin: 0;
+  }
+  
+  /* flowers */
+  
+  .col:nth-child(1), .minimalsworld:nth-child(1) {
+    top: 200px;
+    animation-delay: 1s;
+  }
+  
+  .col:nth-child(3){
+    top: 200px;
+    animation-delay: 2s;
+  }
+  
+  .col:nth-child(4){
+    top: 200px;
+    animation-delay: -2s;
+  }
+  
+  .col:nth-child(6){
+    top: 200px;
+    animation-delay: -1s;
+  }
+  
+  .col:nth-child(8){
+    top: 200px;
+    animation-delay: 2s;
+  }
+  
+  .flower  {
+    position: relative;
+    animation: grow-flowers 5s infinite ease;
+  }
+  .flower div{
+    height: 100px;
+    width: 100px;
+  }
+  .flower .flower-orange{
+    background: var(--orange);
+    background-image: url(../img/icons/html.png);
+    background-size: cover;
+    border: 2px solid var(--light-orange);
+    border-radius: 30% 70% 60% 40% / 30% 38% 62% 70% ;
+    box-shadow: 0 0 0 10px var(--light-orange), 0 0 0 10px var(--orange) inset;
+  }
+  .flower .flower-sql{
+    background: var(--pale-blue);
+    background-image: url(../img/icons/mysql.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 15px solid hsla(207, 55%, 44%, 0.829);
+    border-radius: 46% 54% 46% 54% / 58% 58% 42% 42% ;
+    box-shadow: 0 0 0 15px hsla(231, 79%, 36%, 0.671);
+  }
+  .flower .flower-yellow{
+    background: #F7C41C;
+    background-image: url(../img/icons/javascript.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 10px solid hsla(46, 98%, 62%, 0.822);
+    box-shadow: 0 0 0 15px hsla(46, 100%, 63%, 0.904);
+    border-radius: 16% 84% 54% 46% / 61% 35% 65% 39% ;
+  }
+  
+  .flower .flower-bootstrap{
+    background-image: url(../img/icons/bootstrap.png);
+    background-size: contain;
+    background-color: #7513a3;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 32% 68% 36% 64% / 65% 13% 87% 35% ;
+    border: 10px solid #8026aa6e;
+    box-shadow: 0 0 0 15px hsla(281, 79%, 36%, 0.575);
+  }
+  
+  .flower .flower-php{
+    background-color: hsla(239, 21%, 49%, 0.671);
+    background-image: url(../img/icons/php.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 15px solid #777bb3ce;
+    border-radius: 32% 68% 36% 64% / 65% 13% 87% 35% ;
+    box-shadow: 0 0 0 15px #777bb39a;
+  }
+  
+  .flower .flower-blue{
+    background-color:#1329a3cc;
+    background-image: url(../img/icons/css.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 15px solid #2941c7;
+    box-shadow: 0 0 0 10px #1329a35b;
+    border-radius: 74% 26% 36% 64% / 32% 22% 78% 68% ;
+  }
+  
+  .flower .flower-green{
+    background-color: #00c753;
+    border: 10px solid #00c753;
+    background-image: url(../img/icons/csharp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30% 70% 60% 40% / 30% 38% 62% 70% ;
+    box-shadow: 0 0 0 15px var(--dark-green);
+  }
+  
+  .flower .flower-py{  
+    background: #6fb4ec;
+    background-image: url(../img/icons/py.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 20px solid hsla(207, 77%, 68%, 0.548);
+    box-shadow: 0 0 0 15px #F7C41C;
+    border-radius: 39% 61% 27% 73% / 56% 30% 70% 44%  ;
+  }
+  
+  .flower span {
+    background: var(--light-green);
+    width: 10px;
+    height: 250px;
+    display: block;
+    position: relative;
+    left: 50%;
+    top:95px;  
+    z-index: -1;
+  }
+  
+  .flower span:before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: var(--green);
+    border-radius: 0 25px 25px;
+    position: absolute;
+    left: -47px;
+    top: 70px;
+    box-shadow: 0 0 0 10px var(--light-green) inset;
+    transform: rotateY(140deg);
+    animation: flip-left 5s infinite linear;
+  transform-origin: right;
+  
+  }
+  .flower span:after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: block;
+    background:var(--green);
+    border-radius: 0 25px 0 25px;
+    box-shadow: 0 0 0 10px var(--light-green) inset;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transform: rotateY(-140deg);
+    animation: flip-left 5s infinite linear;
+  transform-origin: left;
+  }
+  
+  /* bees */
+  
+  .bee {
+    transform: scale(1);
+    position: relative;
+    animation: grow-flowers 5s infinite ease;
+  }
+  
+  .furs {
+    display: flex;
+  }
+  
+  .f {
+    height: 75px;
+    width: 75px;
+    border-radius: 75px 75px 0;
+    background: rgb(213, 239, 255);
+    display: inline-block;
+  }
+  
+  .f2 {
+    border-radius: 80px 80px 80px 0;
+  }
+  
+  .body {
+     width: 150px; 
+     height: 75px; 
+    background: #eff33c;
+    border-radius: 50px;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .t1, .t2, .t3 {
+    width: 25px;
+    height: 100%;
+    background: #191919;
+    margin: 0 5px;
+  }
+  
+  .t1 {
+    margin-left: 0;
+  }
+  
+  .eye {
+    width: 35px;
+    height: 20px;
+    border-radius: 50%;
+    background: #191919;
+    position: relative;
+    border: 3px solid #fff;
+    top: 20px;
+    left: -10px;
+  }
+  
+  /* butterflies */
+  
+  .minimalsworld {
+    position: relative;
+    animation: grow-flowers 5s infinite ease-in-out;
+    font-size: 22px;
+  }
+  
+  /* flutterby */
+  
+  .flutterby {
+    position: absolute;
+    left:50%;
+    width: 110px;
+    height: 110px;
+    border-radius: 0 0 32px 0;
+    -webkit-box-reflect: right 8px;
+    font-size: 75px;
+    text-align: right;
+    line-height: 105px;
+    transform: rotate(180deg);
+  }
+  
+  .red:before,.red:after {
+    content: "";
+    position: absolute;
+    height: 114px;
+    width:110px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 40px solid var(--crimson);
+  }
+  
+  .blue:before,.blue:after {
+    content: "";
+    position: absolute;
+    height: 114px;
+    width:110px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 40px solid var(--turquoise);
+  }
+  
+  .flutterby:before {
+    left: -55%;
+    top: -3%;
+  }
+  .flutterby:after {
+    right: 0;
+    bottom: 50%;
+  }
+  
+  .red {
+    background-color:var(--crimson) ;
+    color: var(--crimson);
+  }
+  
+  .text-es {
+    background-color: var(--crimson);
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 25px;
+    border-radius: 5%;
+    position: absolute;
+    top:10%;
+    left: 38%;
+  }
+  
+  .text-en {
+    background-color: var(--turquoise);
+    color: #fff;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5%;
+    position: absolute;
+    top: 10%;
+    left: 42%;
+  }
+  
+  .blue{
+    background-color: var(--turquoise);
+    color: turquoise;
+  }
+  
+  @media (max-width: 770px){
+   .butterflies{
+     height: 700px;
+     margin-top: 0;
+   }
+  
+   .text-en{
+    top: 10%;
+    left: 40%;
+   }
+   .text-es{
+      top: 10%;
+      left: 37%;
+   }
+  
+  }
+  @media (min-width: 771px) and (max-width: 1000px){
+  
+  .text-en{
+    top: 10%;
+    left: 37%;
+   }
+   .text-es{
+      top: 10%;
+      left: 30%;
+   }
   }

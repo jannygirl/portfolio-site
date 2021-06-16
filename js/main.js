@@ -190,15 +190,20 @@
 
         current = pos;
         const currentBlob = blobs[current];
+        const footer = document.querySelector('.footer')
+
         currentBlob.expand().then(() => {
             DOM.content.style.pointerEvents = 'auto';
             const contentInner = DOM.contentInner[pos];
             contentInner.style.opacity = 1;
             // display it only when its clicked on
             contentInner.style.display = 'grid'
-            const footer = document.querySelector('.footer')
-            footer.style.display = 'flex'
 
+            if (pos == 1) {
+                footer.style.display = 'none'
+            } else {
+                footer.style.display = 'flex'
+            }
             anime({
                 targets: [contentInner.querySelectorAll('.content__title > span'), contentInner.querySelectorAll('.content__subtitle > span'), DOM.ctrlBack],
                 // targets: [contentInner.querySelectorAll('.content__title > span'), DOM.ctrlBack],
