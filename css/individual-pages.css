@@ -38,22 +38,25 @@
 
 /* certificate page */
 
-#certifications .p__card .content {
-  bottom: -150px;
-
+#certifications .p__card {
+  justify-content: center;
 }
+#certifications .p__card  a:hover, #projects .p__card  a:hover{
+  color: #fff;
+  text-decoration: underline;
+}
+
 #certifications .p__card:hover .content {
   bottom: 0px;
   color: #fff;
 }
+
 #certifications .p__card img{
 transform: scale(1);
 }
-
 #certifications .p__card img:hover{
   transform: scale(1.1);
-
-}
+} 
 
 /* portfolio */
 
@@ -73,7 +76,6 @@ transform: scale(1);
   margin: 50px auto 30px;
 }
 .p__card {
-  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -93,15 +95,15 @@ transform: scale(1);
 }
 
 .p__card .image {
-  z-index: 1;
-  height: 100%;
+  /* z-index: 1;*/
+  /* height: 50%;  */
 }
 
-.p__card .image img {
+.p__card img {
   height: 100%;
   width: 100%;
   transition: all 0.5s ease;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .p__card:hover .content {
@@ -109,8 +111,8 @@ transform: scale(1);
   color: #fff;
 }
 
-.p__card:hover .image img {
-  transform: scale(1);
+.p__card:hover  img {
+  transform: scale(1.2);
 }
 
 .p__card .content .title {
@@ -134,12 +136,39 @@ transform: scale(1);
   .p__card .content {
     bottom: 0;
   }
+  #certifications .p__card .content{
+		bottom: -520px;
+		left: 0;
+	}
+  #certifications .p__card:hover .content{
+    bottom: -390px;
+    justify-content: end;
+	}
+  #certifications .p__card {
+	margin: 2em 0;
+	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 575px) {
   .p__card {
   width: 100%;
   }
+
+  .portfolio{
+    margin-top: 2em;
+  }
+	.content__close {
+		top: 6em;
+		right: 43%;
+	}
+
+	.close{
+		top: 0%;
+		right: 40%;
+	  } 
+    #projects, #certifications{
+      margin-top: 13em;
+    }
 }
 
   /* skills */

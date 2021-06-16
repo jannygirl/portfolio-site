@@ -390,7 +390,6 @@ main {
 	color: var(--color-text);
 }
 
-
 /* about menu item */
 .menu__item::before, .menu__item:hover::before {
 	background: linear-gradient(45deg, #f19872, #e86c9a);
@@ -447,10 +446,21 @@ main {
 
 @media (min-width: 1200px){
 	.content__inner {
-		margin-top: 7em;
+		margin-top: 5em;
 	}
 	.p__card .content{
 		bottom: -100px;
+		left: 0;
+	}
+	.p__card{
+		height: 20vw;
+	}
+	#certifications .p__card{
+		height: 100%;
+	}
+	#certifications .p__card .content{
+		bottom: -150px;
+		left: 0;
 	}
 }
 
@@ -459,12 +469,38 @@ main {
 		height: 80vh;
 	}
 	.p__card .content{
-		bottom: -100px;
+		height: 100%;
+		bottom: -300px;
+		left: 0;
+	}
+	.p__card{
+		height: 20vw;
+	}
+	#certifications .p__card{
+		height: 100%;
+	}
+	#certifications .p__card .content{
+		bottom: -250px;
+		left: 0;
+	}
+	.content__inner {
+		margin-top: 5em;
 	}
 }
 @media (max-width: 999px){
 	.p__card .content{
 		bottom: -100px;
+		left: 0;
+	}
+	.content__inner {
+		margin-top: 6em;
+	}	
+	.p__card{
+		height: 100%;
+	}
+	#certifications .p__card .content{
+		bottom: -300px;
+		left: 0;
 	}
 }
 @media screen and (max-width: 55em) {
@@ -475,8 +511,9 @@ main {
 		flex-direction: column;
 		height: 100%;
 		bottom: -500px;
-	}
+		left: 0;
 
+	}
 	.content--fixed {
 		z-index: 10000;
 		display: block;
@@ -487,7 +524,7 @@ main {
 		align-items: center;
 	}
 	.codrops-header__title {
-		padding-bottom: 0.25em;
+		padding: 0.25em 0;
 		font-size: 1.5em;
 		text-align: center;
 	}
