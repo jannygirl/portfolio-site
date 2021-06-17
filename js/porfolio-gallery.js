@@ -49,7 +49,3 @@ for (let i = 0; i < cards.length; i++) {
 
 close.addEventListener('click', closeModal)
 
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-})

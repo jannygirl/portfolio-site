@@ -458,7 +458,7 @@ main {
 	#certifications .p__card{
 		height: 100%;
 	}
-	#certifications .p__card .content{
+	#certifications .p__card .content,  .content-tutoring{
 		bottom: -150px;
 		left: 0;
 	}
@@ -479,7 +479,7 @@ main {
 	#certifications .p__card{
 		height: 100%;
 	}
-	#certifications .p__card .content{
+	#certifications .p__card .content,  .content-tutoring{
 		bottom: -250px;
 		left: 0;
 	}
@@ -498,10 +498,11 @@ main {
 	.p__card{
 		height: 100%;
 	}
-	#certifications .p__card .content{
+	#certifications .p__card .content,  .content-tutoring{
 		bottom: -300px;
 		left: 0;
 	}
+
 }
 @media screen and (max-width: 55em) {
 	.message {
